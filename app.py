@@ -43,7 +43,7 @@ uploaded_file = st.file_uploader("Upload an Image....", type=["jpg", "jpeg", "pn
 image = ""
 if uploaded_file is not None:
   image = Image.open(uploaded_file)
-  st.image(image, caption="Uploaded Image", use_container_width=True)
+  st.image(image, caption="Uploaded Image", width="stretch")
 submit_button = st.button("Tell Me")
 if submit_button:
   image_data = input_image_setup(uploaded_file)
